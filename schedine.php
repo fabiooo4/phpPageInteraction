@@ -9,10 +9,7 @@
         <h1 class="fontSize">MEGA TOMBOLATA</h1>
             <div class="center">
                 <?php
-                    $nome = $_GET["nome"];
-                    $cognome = $_GET["cognome"];
-                    $nomeBattello = $_GET["nomeBattello"];
-                    $dataPartenza = $_GET["dataPartenza"];
+
 
                     function randomNumbers ($amount, $min, $max) {
                         $randomNumbers = array();
@@ -60,6 +57,9 @@
             </div>
             <form action="" method="get">
                 <button type="submit" class ="button">Genera nuova schedina</button>
+            </form>
+            <form action="estrazione.php" method="get">
+                <button type="submit" class ="button">Indietro</button>
             </form>
         </body>
 </div>

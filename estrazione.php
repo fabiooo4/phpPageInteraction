@@ -8,12 +8,30 @@
       <body class="mainBg">
         <h1 class="fontSize">ESTRAZIONE NUMERI</h1>
             <div class="center">
+                <?php
+                  function randomNumbers ($amount, $min, $max) {
+                      $randomNumbers = array();
+                      $i = 0;
+                      while($i < $amount){
+                          $randomNumber = rand($min, $max);
+                          if(!in_array($randomNumber, $randomNumbers)){
+                              $randomNumbers[$i] = $randomNumber;
+                              $i++;
+                          }
+                      }
+                      return $randomNumbers;
+                  }
 
-                <form action="schedine.php" method="GET">
-                <button class="button">Estrai</button>
-                <button type="submit" class="button">Segna schedina</button>
-                </form>
+                  echo "<button class='button' onclick=randomNumbers();> Estrai </button>";
+
+
+                  
+
+                ?>
             </div>
+            <form action="schedine.php" method="GET">
+                <button type="submit" class="button">Segna schedina</button>
+            </form>
         </body>
 </div>
 </html>
